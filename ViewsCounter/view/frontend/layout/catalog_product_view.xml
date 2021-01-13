@@ -1,0 +1,8 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="alert.urls">
+            <block class="Kuliievych\ViewsCounter\Block\Catalog\Product\View\ViewsCounter" name="views-counter" as="views-counter" template="Kuliievych_ViewsCounter::counterblock.phtml" />
+        </referenceContainer>
+        <move element="views-counter" destination="product.info.main" after="page.main.title" />
+    </body>
+</page>
