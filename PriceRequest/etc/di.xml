@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Kuliievych\PriceRequest\Api\Repository\PriceRequestRepositoryInterface" type="Kuliievych\PriceRequest\Model\Repository\PriceRequestRepository"/>
+    <preference for="Kuliievych\PriceRequest\Api\Data\PriceRequestInterface" type="Kuliievych\PriceRequest\Model\PriceRequest"/>
+    <preference for="Kuliievych\PriceRequest\Api\Data\PriceRequestSearchResultsInterface" type="Kuliievych\PriceRequest\Model\PriceRequestSearchResults"/>
+    <virtualType name="Kuliievych\PriceRequest\Model\ResourceModel\PriceRequest\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">price_request</argument>
+            <argument name="resourceModel" xsi:type="string">Kuliievych\PriceRequest\Model\ResourceModel\PriceRequest\Collection</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="kuliievych_pricerequest_pricerequest_listing_data_source" xsi:type="string">Kuliievych\PriceRequest\Model\ResourceModel\PriceRequest\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

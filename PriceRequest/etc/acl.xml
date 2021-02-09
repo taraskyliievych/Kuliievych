@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Kuliievych_PriceRequest::PriceRequest" sortOrder="10" title="Price Request">
+                    <resource id="Kuliievych_PriceRequest::PriceRequest_save" sortOrder="10" title="Save PriceRequest"/>
+                    <resource id="Kuliievych_PriceRequest::PriceRequest_delete" sortOrder="20"
+                              title="Delete PriceRequest"/>
+                    <resource id="Kuliievych_PriceRequest::PriceRequest_update" sortOrder="30"
+                              title="Update PriceRequest"/>
+                    <resource id="Kuliievych_PriceRequest::PriceRequest_view" sortOrder="40" title="View PriceRequest"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
